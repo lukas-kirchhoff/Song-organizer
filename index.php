@@ -11,7 +11,7 @@
 <?php
 // Save to file
 if (isset($_POST['submit'])){
-    $thingsToAdd = $_POST['SongName']  . "," . $_POST['Artist'] . "," . $_POST['PlaybackID'] . ";";
+    $thingsToAdd = $_POST['SongName']  . "," . $_POST['Artist'] . "," . $_POST['PlaybackID'] . "\n";
     $file = fopen("songs.txt", "wb") or die("Unable to open file!");
     fwrite($file, $thingsToAdd);
     fclose($file);
